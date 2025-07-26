@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USA Housing Model</title>
+</head>
+<body>
+    <h1>USA Housing Price Prediction</h1>
+    <form method="post" action="/predict">
+        <label for="model">Select Model:</label>
+        <select name="model">
+            {% for model in model_names %}
+            <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Avg. Area Income:</label>
+        <input type="number" step="any" name="Avg. Area Income" required><br><br>
+
+        <label>Avg. Area House Age:</label>
+        <input type="number" step="any" name="Avg. Area House Age" required><br><br>
+
+        <label>Avg. Area Number of Rooms:</label>
+        <input type="number" step="any" name="Avg. Area Number of Rooms" required><br><br>
+
+        <label>Avg. Area Number of Bedrooms:</label>
+        <input type="number" step="any" name="Avg. Area Number of Bedrooms" required><br><br>
+
+        <label>Area Population:</label>
+        <input type="number" step="any" name="Area Population" required><br><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <p><a href="/results">See Model Evaluation Results</a></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Evaluation Results</title>
+    <style>
+        .data { border-collapse: collapse; width: 80%; margin: auto; }
+        .data th, .data td { border: 1px solid #ddd; padding: 8px; }
+        .data th { background-color: #f2f2f2; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Model Evaluation Results</h1>
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+    <p style="text-align: center;"><a href="/">Go Back</a></p>
+</body>
+</html>
