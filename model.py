@@ -15,7 +15,8 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pickle
 
 # Load dataset
-data = pd.read_csv(r"C:\Users\aleti\OneDrive\Desktop\House Price predictor\USA_Housing.csv")
+data = pd.read_csv("USA_Housing.csv")
+
 
 # Preprocessing
 X = data.drop(['Price', 'Address'], axis=1) 
